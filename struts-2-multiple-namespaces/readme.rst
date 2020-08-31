@@ -1,0 +1,1 @@
+You can read tutorial https://www.roytuts.com/multiple-namespaces-example-in-struts2/
