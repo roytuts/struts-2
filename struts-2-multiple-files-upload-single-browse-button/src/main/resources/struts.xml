@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<!-- upload max file size limit -->
+	<constant name="struts.multipart.maxSize" value="10485760" />
+
+	<package name="default" namespace="/" extends="struts-default">
+		<!-- file upload action -->
+		<action name="uploadMultipleFile"
+			class="com.roytuts.struts.multiple.files.upload.single.browse.button.MultipleFileUploadAction">
+			<!-- redirect to input page for file upload again -->
+			<result name="success">/index.jsp</result>
+			<!-- input page for file upload -->
+			<result name="input">/index.jsp</result>
+			<interceptor-ref name="defaultStack">
+				<param name="maximumSize">10485760</param>
+				<!-- what type of files are allowed to be uploaded -->
+				<param name="allowedTypes">text/plain,image/jpeg,image/png,image/gif,image/pjpeg</param>
+			</interceptor-ref>
+		</action>
+	</package>
+</struts>
