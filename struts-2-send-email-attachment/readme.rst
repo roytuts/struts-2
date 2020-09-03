@@ -1,0 +1,1 @@
+You can read tutorial https://www.roytuts.com/sending-email-with-attachment-using-struts2/

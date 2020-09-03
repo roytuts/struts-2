@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<!-- upload max file size limit -->
+	<constant name="struts.multipart.maxSize" value="10485760" />
+	<package name="default" namespace="/" extends="struts-default">
+		<!-- action and action class mapping -->
+		<action name="sendEmail"
+			class="com.roytuts.struts.send.email.attachment.action.SendEmailAction">
+			<result name="success">/index.jsp</result>
+
+			<!-- when we need to show the input form to the user -->
+			<result name="input">/index.jsp</result>
+
+			<!-- we use default interceptor. interceptor are like cross cutting concern. -->
+			<interceptor-ref name="defaultStack">
+				<!-- maximum file size to be allowed to upload -->
+				<param name="maximumSize">10485760</param>
+				<!-- which files are allowed to be uploaded -->
+				<param name="allowedTypes">text/plain,image/jpeg,image/png,image/gif,image/pjpeg</param>
+			</interceptor-ref>
+		</action>
+	</package>
+</struts>
