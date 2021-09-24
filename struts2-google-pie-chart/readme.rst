@@ -1,0 +1,1 @@
+You can read tutorial https://roytuts.com/google-chart-using-struts-2/
