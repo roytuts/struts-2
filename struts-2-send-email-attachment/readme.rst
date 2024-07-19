@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/sending-email-with-attachment-using-struts2/
+Please follow the tutorial https://roytuts.com/sending-email-with-attachment-using-struts2/
